@@ -1,0 +1,181 @@
+@font-face {
+  font-family: "Poiret One";
+  src: url("../fonts/PoiretOne-Regular.ttf");
+ 
+}
+
+* {
+  margin: 0;
+  padding: 0;
+    font-family: sans-serif;
+
+}
+
+
+/*****************Шапка****************/
+
+header {
+  height: 100vh;
+  background-image: url("../img/дополнительно/360850-svetik_2560x1600.jpg");
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav {
+  background-color: blanchedalmond;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+header img,
+nav img {
+  width: 10%;
+}
+
+.logo {
+  text-align: center;
+}
+
+header h2 {
+  font-size: 5em;
+  font-weight: bold;
+    font-family: "Poiret One";
+}
+
+nav a {
+  text-decoration: none;
+  font-size: 1.5em;
+  padding: 1em;
+  color: brown;
+}
+
+nav a.active {
+  background-color: yellow;
+}
+
+
+/*************Блок заявок на главной странице******************/
+
+main {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  column-gap: 1em;
+  row-gap: 1em;
+  padding: 2em 0;
+}
+
+.order {
+  margin: auto;
+  text-align: center;
+  border: black solid 1px;
+  box-shadow: 5px 5px 5px black;
+}
+
+.order img {
+  width: 50%;
+}
+
+.cat {
+  background-color: coral;
+  border-radius: 5px;
+}
+
+
+/*****************Подвал***********************/
+
+footer {
+  height: 200px;
+  background-color: blanchedalmond;
+}
+
+
+/******************Форма регистрации***********/
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 20vw;
+  margin: auto;
+  margin-top: 15vh;
+}
+
+input,
+select,
+textarea,
+button {
+  margin: 10px 0;
+  font-size: 1.5em;
+  padding: 10px;
+}
+
+
+/*************Свои заявки********************/
+
+table {
+  width: 50%;
+  margin: auto;
+  text-align: center;
+  font-size: 1.5em;
+}
+
+#error {
+  display: none;
+  font-family: Arial, Helvetica, sans-serif;
+  color: red;
+  font-weight: 700;
+  margin: 10px 0;
+  font-size: 20px;
+}
+
+.error {
+  font-size: 20px;
+  font-weight: 700;
+  font-family: Arial, Helvetica, sans-serif;
+  color: red;
+  border: 2px solid red;
+  margin: 10px 0;
+  padding: 10px;
+}
+
+.order_cell {
+  padding: 20px;
+}
+
+.order_link {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  border: 1px black solid;
+  margin: 10px;
+  padding: 10px;
+}
+
+.count {
+  margin: 10px auto;
+  text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  main {
+    grid-template-columns: 1fr 1fr;
+  }
+  nav a {
+    padding: 1.5em 5px;
+  }
+  form {
+    width: 90vw;
+    padding: 1em;
+  }
+  table {
+    width: 80%;
+    font-size: 1.2em;
+  }
+  table select {
+    font-size: 1em;
+  }
+}
